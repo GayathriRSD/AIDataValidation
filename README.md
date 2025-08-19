@@ -1,16 +1,16 @@
-# AIDataValidation
-```mermaid
+ ```mermaid 
 flowchart TD
-    A[User Accesses SharePoint AI Assistant] --> B[Chat Interface: Select Application for Validation]
-    B --> C[AI Retrieves Encrypted Raw Access Data rom Network Share]
-    C --> D[Cloud Decryption Service: Decrypts PGP File]
-    D --> E[Decrypted File Stored in SharePoint Workspace]
-    E --> F[User Uploads/Specifies SailPoint Status Report]
-    F --> G[AI Compares: Active Accounts vs Total Assignments (Report)]
-    G --> H{Discrepancy Found?}
-    H -- No --> I[Validation Report Generated with Counts]
-    H -- Yes --> J[AI Identifies Outliers (Duplicate, Missing, Malformed Data)]
-    J --> K[AI Prepares Detailed Discrepancy Report]
-    I --> L[Report Saved in SharePoint Library]
-    K --> L
-    L --> M[User Receives Notification & Link to Report]
+    A[User / Account Team] --> B[Authentication]
+    B --> C[Access AI Assistant (SharePoint / UI)]
+    C --> D[Provide Application for Validation]
+    D --> E[AI Assistant Collects Data from Sources]
+    E --> F[Decryption & Secure Storage]
+    F --> G[AI Assistant Compares Data (SailPoint vs Access Data)]
+    G --> H{Discrepancies Found?}
+    H -- Yes --> I[AI Highlights Issues & Outliers]
+    H -- No --> J[AI Confirms Compliance]
+    I --> K[AI Generates Validation Report]
+    J --> K[AI Generates Validation Report]
+    K --> L[Report Stored in SharePoint]
+    L --> M[User Notified & Can Access Report]
+    M --> N[Observability / Monitoring for Audit]
